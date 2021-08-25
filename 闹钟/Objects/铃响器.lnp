@@ -1,0 +1,4 @@
+".\Objects\STARTUP.obj",
+".\Objects\ring.obj" 
+TO ".\Objects\ÁåÏìÆ÷" 
+PRINT(".\Listings\ÁåÏìÆ÷.m51") RAMSIZE(256) 

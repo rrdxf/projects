@@ -1,0 +1,13 @@
+C51 COMPILER V9.59.0.0   ______                                                            06/19/2020 17:58:24 PAGE 1   
+
+
+C51 COMPILER V9.59.0.0, COMPILATION OF MODULE ______
+OBJECT MODULE PLACED IN .\Objects\БеПмЖч.obj
+COMPILER INVOKED BY: D:\MDK_5\C51\BIN\C51.EXE БеПмЖч.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\БеПм
+                    -Жч.lst) TABS(2) OBJECT(.\Objects\БеПмЖч.obj)
+
+line level    source
+
+*** ERROR C318 OF БеПмЖч.c: can't open file 'БеПмЖч.c'
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  1 ERROR(S)
