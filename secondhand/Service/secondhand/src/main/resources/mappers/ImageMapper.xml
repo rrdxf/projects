@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.secondhand.mapper.ImageMapper">
+
+    <insert id="inSertImage" parameterType="Image">
+		insert into images(imgid,imgsrc,good_id) values(#{imgid}, #{imgsrc},#{good_id})
+	</insert>
+    <select id="findImage" resultType="Image">
+        select *
+        from images
+    </select>
+
+    <delete id="deletimage">
+        delete from images
+        where good_id=#{goodid}
+    </delete>
+
+
+</mapper>

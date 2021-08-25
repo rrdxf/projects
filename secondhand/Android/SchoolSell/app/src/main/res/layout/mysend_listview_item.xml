@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="#77FFEB3B">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/mysend_iv_goodicon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+           />
+        <TextView
+            android:id="@+id/mysend_tv_goodname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我是标题"
+            android:layout_toRightOf="@id/mysend_iv_goodicon"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"/>
+        <TextView
+            android:id="@+id/mysend_good_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="￥xxx"
+            android:layout_toRightOf="@id/mysend_iv_goodicon"
+            android:textSize="13dp"
+            android:textColor="#ff0000"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"/>
+
+
+
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:background="#FFEB3B"
+            android:id="@+id/mysend_btn_decentgood"
+            android:layout_marginTop="15dp"
+            android:radius="50dip"
+            android:shape="oval"
+            android:text="下架"
+            android:layout_marginLeft="300dp"/>
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:background="#FFEB3B"
+            android:id="@+id/mysend_btn_decentgoodprice"
+            android:radius="50dip"
+            android:shape="oval"
+            android:text="降价"
+            android:layout_below="@id/mysend_good_price"
+            android:layout_toRightOf="@id/mysend_iv_goodicon"
+            android:layout_marginLeft="60dp"/>
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:background="#FFEB3B"
+            android:id="@+id/mysend_btn_edictgood"
+            android:radius="50dip"
+            android:shape="oval"
+            android:text="编辑"
+            android:layout_below="@id/mysend_good_price"
+            android:layout_toRightOf="@id/mysend_btn_decentgoodprice"
+            android:layout_marginLeft="60dp"/>
+
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

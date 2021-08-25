@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/message"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingTop="5dp">
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:id="@+id/list"/>
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:background="#00000000"
+
+            android:id="@+id/btn_zan"
+            android:text="总价："
+            android:textColor="#F44336"
+            android:layout_width="70dp"
+            android:textSize="@dimen/dp_20"
+            android:layout_height="wrap_content"/>
+
+
+        <TextView
+            android:layout_toRightOf="@id/btn_zan"
+            android:background="#00000000"
+
+            android:id="@+id/tv_shopcartotalprice"
+
+            android:textColor="#F44336"
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/dp_20"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_toRightOf="@id/tv_shopcartotalprice"
+            android:background="#00000000"
+
+            android:id="@+id/btn_collect"
+            android:text="￥"
+            android:textColor="#F44336"
+            android:layout_width="70dp"
+            android:textSize="@dimen/dp_20"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btn_cartjiesuan"
+            android:background="#00000000"
+            android:drawableTop="@drawable/jiesuan"
+            android:layout_alignParentRight="true"
+            android:layout_width="80dp"
+
+            android:textColor="#8a8a8a"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+</RelativeLayout>

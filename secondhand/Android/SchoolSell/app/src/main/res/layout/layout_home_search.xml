@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:id="@+id/titleBar">
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:background="@mipmap/search1"
+        android:layout_centerVertical="true"
+        />
+
+
+    <Button
+        android:paddingLeft="20dp"
+        android:drawableLeft="@drawable/home_search"
+        android:hint="搜索"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_home_search_btn"
+
+        android:layout_marginLeft="20dp"
+        android:layout_width="280dp"
+        android:layout_height="30dp"
+
+        android:layout_marginStart="15dp"
+        />
+
+
+    <ImageButton
+        android:background="#00000000"
+
+        android:id="@+id/btn_scan"
+
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:paddingLeft="15dp"
+        />
+
+
+
+</RelativeLayout>

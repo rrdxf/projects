@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/index"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingTop="5dp">
+
+
+
+
+        <include
+            android:id="@+id/titleBar"
+            layout="@layout/layout_home_search"
+            />
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/lubo"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_below="@+id/titleBar"
+            android:layout_marginTop="5dp"
+            />
+
+        <LinearLayout
+            android:id="@+id/btn_list_layout"
+            android:layout_below="@id/lubo"
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_mobile_phone"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.25"
+                android:background="#00000000"
+                android:drawableTop="@mipmap/phone"
+                android:text="二手手机" />
+            <Button
+                android:background="#00000000"
+                android:drawableTop="@mipmap/book"
+                android:text="二手书"
+                android:id="@+id/btn_book"
+                android:layout_weight="0.25"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+            <Button
+                android:background="#00000000"
+                android:drawableTop="@mipmap/computer"
+                android:text="二手电脑"
+                android:id="@+id/btn_comeputer"
+                android:layout_weight="0.25"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+
+            <Button
+                android:id="@+id/btn_all"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.25"
+                android:background="#00000000"
+                android:drawableTop="@mipmap/more"
+                android:text="其他分类" />
+        </LinearLayout>
+
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_list_layout"
+            android:layout_marginTop="5dp"
+            android:id="@+id/index_list"/>
+
+
+
+
+
+</LinearLayout>

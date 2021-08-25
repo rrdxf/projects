@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.secondhand.mapper.GoodMapper">
+
+    <insert id="insertGood"  parameterType="Good">
+		insert into goods(Goodid,Goodname,Goodprice,Goodexpression,user_id) values(#{Goodid}, #{Goodname},#{Goodprice},#{Goodexpression},#{ownerid})
+	</insert>
+
+
+    <resultMap id="goodanduser" type="Good">
+        <id column="Goodid" property="Goodid"/>
+        <result column="Goodprice" property="Goodprice"/>
+        <result column="Goodname" property="Goodname"/>
+        <result column="Goodexpression" property="Goodexpression"/>
+        <association property="owner" column="User">
+            <id column="Userid" property="Userid"/>
+            <result column="Username" property="Username"/>
+            <result column="Userphone" property="Userphone"/>
+            <result column="Usericon" property="Usericon"/>
+        </association>
+        <collection property="Goodimgelist" javaType="java.util.ArrayList" ofType="com.example.secondhand.beans.Image">
+            <id column="imgid" property="imgid"/>
+            <result column="imgsrc" property="imgsrc"/>
+        </collection>
+    </resultMap>
+
+    <select id="selectGoodbyuserid" resultMap="goodanduser">
+        SELECT *
+        FROM
+        goods g  users u
+        on g.user_id=u.Userid
+        and g.user_id=#{Userid}
+    </select>
+
+    <select id="selectAllGood" resultMap="goodanduser">
+        select *
+        from (goods g left join users u
+        on u.Userid=g.user_id )left join images
+        on g.Goodid=images.good_id
+
+    </select>
+
+    <delete id="deletGood">
+        delete from goods
+        where Goodid=#{goodid}
+    </delete>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
