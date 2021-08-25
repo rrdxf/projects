@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.secondhand.mapper.UserMapper">
+
+    <insert id="insertUser" parameterType="com.example.secondhand.beans.User">
+		insert into users (Userid, Userpassword, Userphone)  values(#{Userid}, #{Userpassword}, #{Userphone})
+	</insert>
+
+	<delete id="deletuser" >
+		delete from users
+		where Userid=#{userid}
+	</delete>
+
+	<select id="selectall" resultType="com.example.secondhand.beans.User">
+		select * from users
+	</select>
+
+	<resultMap id="usrandgood" type="User">
+		<id column="Userid" property="Userid"/>
+		<result column="Userpassword" property="Userpassword"/>
+		<result column="Userphone" property="Userphone"/>
+		<result column="Useraddress" property="Useraddress"/>
+		<result column="Usericon" property="Usericon"/>
+		<result column="Username" property="Username"/>
+		<collection property="HoldGood" javaType="java.util.ArrayList" ofType="Good">
+			<id column="Goodid" property="Goodid"/>
+			<result column="Goodprice" property="Goodprice"/>
+			<result column="Goodname" property="Goodname"/>
+			<result column="Goodexpression" property="Goodexpression"/>
+			<collection property="Goodimgelist" javaType="java.util.ArrayList" ofType="com.example.secondhand.beans.Image">
+				<id column="imgid" property="imgid"/>
+				<result column="imgsrc" property="imgsrc"/>
+			</collection>
+		</collection>
+	</resultMap>
+    <select id="findUserById" resultMap="usrandgood">
+		select *
+		from users u
+		left join(select  *
+					from goods g
+					left join images img
+					on g.Goodid=img.good_id) i
+		on ( u.Userid=i.user_id  )
+		where (u.Userid=#{Userid} and u.Userpassword=#{Userpassword})
+	</select>
+
+	<update id="updateIcon">
+		update users set Usericon=#{iconname}
+		where Userid=#{userid}
+	</update>
+
+
+	<select id="findifnullbyId" resultType="User">
+		select * from users where Userid = #{Userid}
+	</select>
+
+</mapper>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.secondhand.mapper.ShopcartMapper">
+
+    <insert id="InsertShopchar" parameterType="ShopCart">
+		insert into shopcart_good(shopcartid,user_id,good_id) values(#{shopcartid}, #{userid},#{goodid})
+	</insert>
+
+
+	<select id="findShopcartByid" resultType="Shopcart">
+		select *
+		from shopcart_good
+		where user_id=#{userid}
+	</select>
+	<delete id="deletShopcart">
+		delete
+		from  shopcart_good
+		where user_id=#{userid} and good_id=#{goodid}
+	</delete>
+
+</mapper>

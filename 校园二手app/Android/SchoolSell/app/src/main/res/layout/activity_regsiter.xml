@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/register_image"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/register1"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/register_infoid"
+        android:layout_below="@id/register_image">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="输入账号:"
+            android:textSize="30dp"
+            android:background="#A4FFEB3B"/>
+        <EditText
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_regsiter_infoid"
+            android:textSize="30dp"
+            android:background="#A4FFEB3B"
+            android:ems="10"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:id="@+id/register_password"
+        android:layout_below="@id/register_infoid">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="输入密码:"
+
+            android:textSize="30dp"
+            android:background="#A4FFEB3B"/>
+        <EditText
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_regsiter_password"
+            android:textSize="30dp"
+            android:inputType="textPassword"
+            android:background="#A4FFEB3B"
+            android:ems="10"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:id="@+id/register_password1"
+        android:layout_below="@id/register_password">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="确认密码:"
+            android:textSize="30dp"
+
+            android:background="#A4FFEB3B"/>
+
+        <EditText
+            android:layout_width="220dp"
+            android:inputType="textPassword"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_regsiter_password1"
+            android:textSize="30dp"
+            android:background="#A4FFEB3B"
+            android:ems="10"/>d
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:id="@+id/register_phone"
+        android:layout_below="@id/register_password1">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="输入电话:"
+            android:textSize="30dp"
+            android:background="#A4FFEB3B"/>
+        <EditText
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_regsiter_phone"
+            android:textSize="30dp"
+            android:background="#A4FFEB3B"
+            android:ems="10"/>
+
+    </LinearLayout>
+    <ImageButton
+        android:id="@+id/register_btn_register"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/register_phone"
+        android:layout_centerHorizontal="true"
+        android:background="@mipmap/btnregister"
+        android:layout_marginTop="20dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="已有账号，点击登录"
+        android:layout_below="@id/register_btn_register"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="50dp"
+        android:textColor="#0000ff"
+        android:id="@+id/register_tv_logon"/>
+
+
+
+</RelativeLayout>
